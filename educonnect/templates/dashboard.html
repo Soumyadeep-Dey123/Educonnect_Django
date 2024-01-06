@@ -1,0 +1,67 @@
+{% extends 'header.html' %}
+
+{% block head %}<link rel="stylesheet" href="static/dashboard.css">{% endblock head %}
+
+{% block title %}My Profile{% endblock title %}
+{% block body %}
+<div class="nav">
+    <div class="logo">
+        <img src="logo-final-withoutname.png" alt="Logo">
+    </div>
+    <div class="profile-picture">
+        <img id="profile-image" src="static\images\SunilLeba.jpeg" alt="profile-picture">
+        <input type="file" id="profile-image-upload" accept="image/*" onchange="updateProfilePicture()">
+    </div>
+</div>
+<div class="tag">
+    <div class="heading">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="#">Account</a>
+    </div>
+</div>
+<div class="page-name">
+    <h1>Account</h1>
+</div>
+<div class="main-contents">
+    <div class="left-toggle-menu">
+        <a href="#" class="selected">My Profile</a>
+        <a href="#">Invite & Earn</a>
+        <a href="#">Wallet</a>
+        <a href="#">Transactions</a>
+        <a href="#">Settings</a>
+    </div>
+    <div class="right-profile">
+        <div class="profile-info">
+            <div class="profile-pic">
+                <img id="profile-image" src="images\leba3.jpg" alt="profile-picture">
+                <input type="file" id="profile-image-upload" accept="image/*" onchange="updateProfilePicture()">
+            </div>
+            <div class="user-details">
+                <div class="editable-field">
+                    <label for="username">Username:</label>
+                    <span id="username">JohnDoe</span>
+                    <i class="fas fa-edit" onclick="editField('username')"></i>
+                </div>
+                <div class="editable-field">
+                    <label for="email">Email:</label>
+                    <span id="email">john.doe@example.com</span>
+                    <i class="fas fa-edit" onclick="editField('email')"></i>
+                </div>
+                <div class="editable-field">
+                    <label for="contact">Contact number:</label>
+                    <span id="contact">123-456-7890</span>
+                    <i class="fas fa-edit" onclick="editField('contact')"></i>
+                </div>
+                <div class="editable-field">
+                    <label for="dob">Date of Birth:</label>
+                    <span id="dob">01/01/1990</span>
+                    <i class="fas fa-edit" onclick="editField('dob')"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<script src="dashboard.js"></script>
+{% endblock body %}

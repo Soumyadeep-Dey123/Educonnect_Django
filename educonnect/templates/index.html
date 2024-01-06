@@ -1,0 +1,127 @@
+{% extends "header.html" %}
+
+{% comment %} {% block head %}<link rel="stylesheet" href="static/styles.css">{% endblock head %} {% endcomment %}
+
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+<img src="static/images/logo-final-withoutname.png" alt="Your Logo" class="logo-outside">
+<div class="navbar">
+    <div class="menu-toggle">&#9776;</div>
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Courses</a>
+        <a href="dashboard.html">Dashboard</a>
+        
+    </div>
+    <div class="search-bar">
+        <input type="text" placeholder="&#128269;">
+        
+    </div>
+</div>
+<!-- Home Section Begins -->
+<div class="home-section" id="mainContent">
+    <div class="home-text">
+        <h3>Lets</h3>
+        <h1>E-learning</h1>
+        <h2>at your home</h2>
+        <p>A place where learning becomes fun</p>
+        <div class="home-btn">
+            <div class="btn-left">
+                <button class="btnl" id="applyButton" onclick="openOverlay()">Sign Up</button>
+            </div>
+            <!-- <div class="btn-right">
+                <button class="btnr" id="applylogin" onclick="openLogin()">Login</button>
+            </div> -->
+        </div>
+    </div>
+    <div class="home-image">
+        <img src="static/images/SunilLeba.jpeg" alt="Image Description">
+    </div>
+</div>
+<!-- Sign up Begins -->
+<div class="overlay" id="overlay">
+    <div class="overlay-content">
+        <span id="closeButton" class="close-btn" onclick="closeOverlay()">&times;</span>
+        
+        <h1 id="title">SIGN UP</h1>
+        <form action="">
+            <div class="input-group">
+                <div class="input-field" >
+                    <i class="fa-solid fa-user"></i>
+                    
+                    <input type="text" placeholder="Username*" required>       
+                </div>
+                <div class="input-field" id="nameField">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="Email*" required>
+                </div>
+                <div class="input-field">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="Password*" id="password" required>
+                    <img src="eye-close.png" class ="eye-icon" id="eyeicon"alt="">
+                </div> 
+                <pre>    <a  href="#">Forget Password</a></pre>                                
+            </div>
+            <div class="btn-field">                         
+                <button type="submit"  id="signupBtn" ><b> SIGN UP</b></button>
+                <button type="submit" id="signinBtn" class="disable"><b>SIGN IN</b></button>
+            </div>
+        </form>        
+    </div>
+</div>
+
+<!-- LOGIN FORM BEGINS -->
+<!-- <div class="overlay" id="overlaylogin">
+    <div class="overlay-content">
+        <span id="closeButtonLog" class="close-btn" onclick="closeLogin()">&times;</span>
+        <h2>Log In</h2>
+        
+        <form id="login-form">
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>             
+            
+            
+            <button type="submit">Login</button>
+            <p>Don't Have An Account?</p>
+            <a href="" target="blank" onclick="switchSignup()">Signup</a>
+        </form>
+    </div>
+</div> -->
+
+
+<div class="contact-icon" onclick="openContactForm()">
+    <i class="fa-duotone fa-comment-dots"></i>
+</div>
+<div class="contact-form-overlay" id="contactFormOverlay">
+    <div class="contact-form">
+        <span class="close-btn" onclick="closeContactForm()">&times;</span>
+        <h2 class="contact-head">Get in touch</h2>
+        <!-- Your contact form fields go here -->
+        <form id="contactForm">
+            <input type="text" id="name" name="name" placeholder="Name" required>              
+            <input type="email" id="email" placeholder="email" name="email" required>
+            <textarea id="message" name="message" placeholder="message" rows="4" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</div>
+<footer>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com/" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+    </div>
+</footer>
+
+
+<script src="static/script.js"></script>
+
+<!-- <i class="fa-duotone fa-comment-dots"></i> -->
+{% endblock body %}

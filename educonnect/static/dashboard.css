@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Hedvig+Letters+Sans&family=Poppins&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css');
+* {
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'Baloo 2', sans-serif;
+    font-family: 'Hedvig Letters Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+
+  
+
+}
+body{
+    background: linear-gradient(to right, hsl(203, 54%, 92%) ,hsl(203, 54%, 92%));
+    
+    font-family: 'Baloo 2', sans-serif;
+    font-family: 'Hedvig Letters Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+.nav{
+    padding: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.profile-picture {
+    display: flex;
+    align-items: center;
+}
+
+#profile-image {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+
+#profile-image-upload {
+    display: none;
+}
+
+
+#profile-image:hover {
+    border: 2px solid #4CAF50; 
+}
+ 
+.tag .heading a {
+    text-decoration: none;
+    color: #3498db; 
+     
+}
+
+.tag .heading a:hover {
+    text-decoration: underline;
+}
+.tag{
+    padding-left: 20px;
+}
+.tag .heading span {
+    color: #e74c3c; 
+     
+}
+.page-name{
+    padding-left: 20px;
+}
+.main-contents{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+    gap: 30px;
+}
+.left-toggle-menu {
+    width: 250px; 
+    background-color: #6e70df; 
+    color: #fff; 
+    margin-left: 20px;
+    padding-left: 20px;
+    border-radius: 10px;
+}
+
+.left-toggle-menu a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+
+    .left-toggle-menu a:hover {
+        background-color: #2c3e50; 
+    
+}
+.left-toggle-menu a.selected {
+    background-color: #6e70df;  
+    color: #fff; 
+}
+
+.left-toggle-menu a:hover:not(.selected) {
+    background-color: #ecf0f1; 
+}
+.right-profile {
+    background-color: #6e70df;  
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+}
+
+.right-profile .profile-info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.right-profile .profile-pic img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.right-profile .user-details {
+    flex-grow: 1;
+}
+
+.right-profile .editable-field label {
+    margin-right: 10px;
+}
+
+.right-profile .editable-field span {
+    display: inline-block; 
+    vertical-align: middle;
+    border-bottom: 1px dotted #3498db;
+    padding-bottom: 2px;
+    margin-right: 10px;
+  
+}
+.right-profile .editable-field {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 15px; 
+}
+
+.right-profile .editable-field i {
+    cursor: pointer;
+    color: #3498db;
+}
+
+.right-profile .editable-field.edit-mode span {
+    border-bottom: none;
+}
+
+.right-profile .editable-field.edit-mode input {
+    border-bottom: 1px solid #3498db;
+    padding-bottom: 2px;
+    margin-right: 10px;
+}
+ 
+ 
