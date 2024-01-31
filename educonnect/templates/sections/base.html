@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="static\favicon\apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static\favicon\favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static\favicon\favicon-16x16.png">
+    <link rel="manifest" href="static/favicon/site.webmanifest">
+    <script src="https://kit.fontawesome.com/6e9db139fc.js" crossorigin="anonymous"></script>
+    {% block css %}{% endblock css %}    
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>EDUCONNECT | {% block title %}{% endblock title %}</title>
+</head>
+<body>
+    <img src="static/images/logo-final-withoutname.png" alt="Your Logo" class="logo-outside">
+    <div class="navbar">
+        <div class="menu-toggle">&#9776;</div>
+        
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/notdone">About</a>
+            <a href="/courses">Courses</a>
+            <a href="/dashboard">Profile</a>
+            <i class=" theme-icon fa-solid fa-sun" onclick="toggleTheme()"></i>
+        </div>
+        <!-- <div class="search-bar">
+            <input type="text" placeholder="&#128269;">
+    
+        </div> -->
+    </div>
+    {% block body %}{% endblock body %}
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+    {% block javascript %}{% endblock javascript %}
+</body>
+</html>

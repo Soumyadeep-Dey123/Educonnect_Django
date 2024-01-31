@@ -1,0 +1,69 @@
+{% extends "sections/base.html" %}
+{% block css %}<link rel="stylesheet" id="theme-link" href="static/css/courses.css">{% endblock css %}
+{% block title %}Courses{% endblock title %}
+
+{% block body %}
+    <div class="welcome-text-holder">
+        <div class="welcome-text">
+            <h1>Welcome to EDUCONNECT</h1>
+        </div>
+    </div>
+    <div class="courses-section">
+        <div class="course-row">
+            <div class="image-course">
+                <a href="/notdone">
+                <img src="static\images\20240107_094002_0000.png" alt="Course 1 Thumbnail" class="course-thumbnail">
+                </a>
+            </div>
+            <div class="course-details">
+                <a href="course_2.html">   <h2>Course 1 Title</h2>
+                    <p>Description of Course 1 goes here.</p>
+                    <p class="price">$99.99</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="course-row">
+            <div class="image-course">
+                <a href="/notdone">
+                    <img src="static\images\20240107_093754_0000.png" alt="Course 2 Thumbnail" class="course-thumbnail">
+                </a>
+            </div>
+            <div class="course-details">
+                <h2>Course 2 Title</h2>
+                <p>Description of Course 2 goes here.</p>
+                <p class="price">$79.99</p>
+            </div>
+        </div>
+        <div class="course-row">
+            <div class="image-course">
+                <a href="/notdone">
+                    <img src="static\images\20240107_093754_0000.png" alt="Course 2 Thumbnail" class="course-thumbnail">
+                </a>
+            </div>
+            <div class="course-details">
+                <h2>Course 2 Title</h2>
+                <p>Description of Course 2 goes here.</p>
+                <p class="price">$79.99</p>
+            </div>
+        </div>
+        <div class="course-row">
+            <div class="image-course">
+                <a href="/notdone">
+                    <img src="static\images\20240107_093754_0000.png" alt="Course 2 Thumbnail" class="course-thumbnail">
+                </a>
+            </div>
+            <div class="course-details">
+                <h2>Course 2 Title</h2>
+                <p>Description of Course 2 goes here.</p>
+                <p class="price">$79.99</p>
+            </div>
+        </div>
+    </div>
+
+    {% block javascript %}<script src="static/js/courses.js"></script>{% endblock javascript %}
+
+{% endblock body %}
+
+<!-- <i class="fa-regular fa-star"></i> -->
+<!-- <i class="fa-solid fa-star"></i> -->

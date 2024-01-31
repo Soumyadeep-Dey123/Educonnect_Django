@@ -1,0 +1,21 @@
+<div class="contact-icon" onclick="openContactForm()">
+    <i class="fa-duotone fa-comment-dots"></i>
+</div>
+<div class="contact-form-overlay" id="contactFormOverlay">
+    <div class="contact-form">
+        <span class="close-btn" onclick="closeContactForm()">&times;</span>
+        <h2 class="contact-head">Get in touch</h2>
+        <!-- Your contact form fields go here -->
+        <form id="contactForm">
+            
+            <input type="text" id="name" name="name" placeholder="Name" required>
+            
+            
+            <input type="email" id="email" placeholder="email" name="email" required>
+            
+            <textarea id="message" name="message" placeholder="message" rows="4" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</div>

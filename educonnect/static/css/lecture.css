@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Hedvig+Letters+Sans&family=Poppins&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'Baloo 2', sans-serif;
+    font-family: 'Hedvig Letters Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+
+  
+
+}
+body{
+    background: linear-gradient(to right, #f7f5f8 ,#e1eef6);
+    font-family: 'Baloo 2', sans-serif;
+    font-family: 'Hedvig Letters Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+.logo-outside {
+    width: 12rem; 
+    height: 10rem; 
+    margin: -10px 0; 
+    margin-left: 10%;
+ 
+ }
+ .course-details a{
+    text-decoration: none;
+    color:black;
+ }
+
+.navbar {
+    
+    position: fixed;
+    top: 5%;
+    right: 0;
+    left: auto;
+    background:linear-gradient(to right , #6e70df, #9399f1);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 65%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 15px; 
+    border-bottom-left-radius: 15px; 
+    transition: background-color 0.3s;
+    font-family: 'Baloo 2', sans-serif;
+    font-family: 'Hedvig Letters Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 30px;
+    padding: 10px;
+    position: relative;
+}
+ 
+
+ 
+ 
+.navbar a:hover {
+    border-top: 4px solid white;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+}
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 6px;
+    margin-right: 8px;
+    border: none;
+    border-radius: 10px;
+}
+
+ .image-course{
+    margin-left: 1.5%;
+ }
+
+@media only screen and (max-width: 1200px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 10px;
+        width: 20%;
+        border-radius: 200px;
+        right: 1%;
+    }
+    
+.navbar a:hover {
+    border-bottom: 4px solid white;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+    border-top: none;
+}
+    .search-bar{
+        display: none;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        text-align: right;
+    }
+
+    .navbar.active .nav-links {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+.video-container{
+    display: flex;
+    width: 100%;
+    height:100%;
+    padding-left: 2%;
+
+}
+ 
+.chapter-toggle{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+    
+}
+.chapter-box{
+    display: flex;
+    border: solid 0.2px black;
+    height: 10vh;
+    width: 80%;
+
+ }
+ .chapter-box:hover{
+    background-color: #9399f1;
+ }
+ .chapter-head{
+    padding-left: 3%;
+    padding-top: 1%;
+ }
+ .chapter-count{
+    padding-top: 3px;
+    padding-left: 1%;
+ }
+ .lesson-count p{
+    font-size: 4px;
+ }
+ .chapter-head p{
+    font-size: medium;
+ }
+ .syllabus{
+    padding-bottom: 2%;
+ }
+ .dropdown-icon{
+    padding-left: 40%;
+    padding-top: 3%;
+ }
+  
+
+.video-holder {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+ 
+ 
+}
+.video-player{
+    width: 100%;
+    
+}
+
+
+.video-player video {
+    width: 100%; 
+}
+.lecture-name{
+    display: flex;
+    justify-content: space-between;
+}
+.course-lecture{
+    display: flex;
+    border: solid 0.2px black;
+    height: 10vh;
+    width: 80%;
+    display: none; 
+ }
+ .chapter-play{
+    padding-top: 3%;
+    padding-left: 1%;
+    
+ }
+ .lec-name{
+    padding-top: 3%;
+    padding-left: 3%;
+ }
+ @media only screen and (max-width: 1200px) {
+     
+    .video-container {
+    
+        flex-direction: column;
+    }
+    
+    .lecture-heading{
+        font-size:0.5rem;
+    }
+     .lecture-name{
+        flex-direction: column;
+     }
+    .chapter-toggle {
+        width: 100%;
+        padding: 1%;
+    }
+
+    .dropdown-icon {
+        padding-left: 20%;
+    }
+}

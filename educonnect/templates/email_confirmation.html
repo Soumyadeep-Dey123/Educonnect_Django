@@ -1,0 +1,14 @@
+{% autoescape off %}
+
+ Welcome to EduSphere Login!!
+ Hello {{ name }}!!
+
+ Please confirm your email by clicking on the following link.
+
+ Confirmation Link: http://{{ domain }}{% url 'activate' uidb64=uid token=token %} 
+
+ Dont forget to complete your profile after confirming your email.
+
+ Dont reply to this email. This is an auto generated email.
+
+ {% endautoescape %}
