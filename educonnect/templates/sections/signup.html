@@ -25,21 +25,21 @@
                         <input type="email" placeholder="Enter Your Email" name="email" required>
                     </div>
                     
-                    <div class="input-field" id="nameField">
+                     <div class="input-field" id="nameField">
                         <i class="fa-solid fa-envelope"></i>
-                        <input type="text" placeholder="Enter Your Username" name="username" required>            
-                    </div>
+                        <input type="text" placeholder="Enter Your Username" id="username" name="username" required>            
+                    </div> 
                     
                     <div class="input-field">
                         <i class="fa-solid fa-lock"></i>
                         <input type="password" placeholder="Enter Your Password" id="password" name="pass1" required>
-                        {% comment %} <img src="eye-close.png" class ="eye-icon" id="eyeicon"alt=""> {% endcomment %}
+                        <img src="eye-close.png" class ="eye-icon" id="eyeicon"alt="">
                     </div> 
                     
-                    <div class="input-field" id="passField">
+                     <div class="input-field" id="passField">
                         <i class="fa-solid fa-lock"></i>
-                        <input type="password" placeholder="Confirm Your Password" name="pass2" required>
-                        {% comment %} <img src="eye-close.png" class ="eye-icon" id="eyeicon"alt=""> {% endcomment %}
+                        <input type="password" placeholder="Confirm Your Password" id="pass2" name="pass2" required>
+                        <img src="eye-close.png" class ="eye-icon" id="eyeicon"alt="">
                     </div> 
                     <br>
                     <pre>    
@@ -49,7 +49,10 @@
                 <br>
                 <div class="btn-field">
                     <button type="submit" name="action" value="signup"  id="signupBtn" ><b> SIGN UP</b></button>
-                    <button type="submit" name="action" value="login" id="signinBtn" class="disable"><b>LOGIN</b></button>
+                    <button type="submit" name="action" value="login" id="signinBtn" style="display:none;"><b>LOGIN</b></button>
+                    <br>
+                    <span id="signupBtn1" style="display:none;">New Here? <b style="cursor:pointer; background-color: white; color: black;">SIGN UP</b></span>
+                    <span id="signinBtn1">Already Have An Account? <b style="cursor:pointer; background-color: white; color: black;">LOGIN</b></span>
                 </div>
                             
             </form>          

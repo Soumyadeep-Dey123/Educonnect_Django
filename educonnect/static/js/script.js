@@ -1,55 +1,55 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const navbar = document.querySelector(".navbar");
-  const menuToggle = document.querySelector(".menu-toggle");
 
-  menuToggle.addEventListener("click", function () {
-    navbar.classList.toggle("active");
-  });
+const nav = document.querySelector(".navbar");
+const menuToggle = document.querySelector(".menu-toggle");
+
+menuToggle.addEventListener("click", function () {
+  nav.classList.toggle("active");
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  function openOverlay() {
-    var overlay = document.getElementById("overlay");
-    overlay.style.display = "block";
-  }
-  function closeOverlay() {
-    var overlay = document.getElementById("overlay");
-    overlay.style.display = "none";
-  }
 
-  var applyButton = document.getElementById("applyButton");
-  var closeButton = document.getElementById("closeButton");
 
-  if (applyButton) {
-    applyButton.addEventListener("click", openOverlay);
-  }
+function openOverlay() {
+  var overlay = document.getElementById("overlay");
+  overlay.style.display = "block";
+}
+function closeOverlay() {
+  var overlay = document.getElementById("overlay");
+  overlay.style.display = "none";
+}
 
-  if (closeButton) {
-    closeButton.addEventListener("click", closeOverlay);
-  }
-});
+var applyButton = document.getElementById("applyButton");
+var closeButton = document.getElementById("closeButton");
 
-document.addEventListener("DOMContentLoaded", function () {
-  function openLogin() {
-    var overlaylogin = document.getElementById("overlaylogin");
-    overlaylogin.style.display = "block";
-  }
-  function closeLogin() {
-    var overlaylogin = document.getElementById("overlaylogin");
-    overlaylogin.style.display = "none";
-  }
+if (applyButton) {
+  applyButton.addEventListener("click", openOverlay);
+}
 
-  var applylogin = document.getElementById("applylogin");
-  var closeLog = document.getElementById("closeButtonLog");
+if (closeButton) {
+  closeButton.addEventListener("click", closeOverlay);
+}
 
-  if (applylogin) {
-    applylogin.addEventListener("click", openLogin);
-  }
 
-  if (closeLog) {
-    closeLog.addEventListener("click", closeLogin);
-  }
-});
+
+function openLogin() {
+  var overlaylogin = document.getElementById("overlaylogin");
+  overlaylogin.style.display = "block";
+}
+function closeLogin() {
+  var overlaylogin = document.getElementById("overlaylogin");
+  overlaylogin.style.display = "none";
+}
+
+var applylogin = document.getElementById("applylogin");
+var closeLog = document.getElementById("closeButtonLog");
+
+if (applylogin) {
+  applylogin.addEventListener("click", openLogin);
+}
+
+if (closeLog) {
+  closeLog.addEventListener("click", closeLogin);
+}
+
 
 // overlay switching
 // document.addEventListener("DOMContentLoaded", function() {
@@ -78,15 +78,15 @@ document.addEventListener("DOMContentLoaded", function () {
 //             openOverlay("signupOverlay");
 //         });
 //     }
-// });
-document.addEventListener('DOMContentLoaded', function () {
-  const savedTheme = localStorage.getItem('theme');
-  const themeLink = document.getElementById('theme-link');
 
-  if (savedTheme) {
-    themeLink.setAttribute('href', savedTheme);
-  }
-});
+
+const savedTheme = localStorage.getItem('theme');
+const themeLink = document.getElementById('theme-link');
+
+if (savedTheme) {
+  themeLink.setAttribute('href', savedTheme);
+}
+
 
 function toggleTheme() {
   const themeLink = document.getElementById('theme-link');
@@ -97,16 +97,16 @@ function toggleTheme() {
     themeIcon.classList.remove('fa-sun');
     themeIcon.classList.add('fa-moon');
     localStorage.setItem('themeChoice', 'fa-moon');
-   
-  
-} else {
+
+
+  } else {
     themeIcon.classList.remove('fa-moon');
     themeIcon.classList.add('fa-sun');
     localStorage.setItem('themeChoice', 'fa-sun');
-    
-}
 
- 
+  }
+
+
 
   if (currentTheme === 'static/css/styles.css') {
     themeLink.setAttribute('href', 'static/css/dark.css');
@@ -119,31 +119,42 @@ function toggleTheme() {
 
 let signupBtn = document.getElementById("signupBtn");
 let signinBtn = document.getElementById("signinBtn");
+let signupBtn1 = document.getElementById("signupBtn1");
+let signinBtn1 = document.getElementById("signinBtn1");
 let nameField = document.getElementById("nameField");
 let passField = document.getElementById("passField");
 let title = document.getElementById("title");
 
-signinBtn.onclick = function () {
+
+signinBtn1.onclick = function () {
   nameField.style.maxHeight = "0";
   passField.style.maxHeight = "0";
-  title.innerHTML = "LOGIN";
-  signupBtn.classList.add("disable");
-  signinBtn.classList.remove("disable");
+  document.getElementById("signupBtn").style.display = "none";
+  document.getElementById("signupBtn1").style.display = "block";
+  document.getElementById("signinBtn").style.display = "block";
+  document.getElementById("signinBtn1").style.display = "none";
+  document.getElementById("nameField").style.display = "none";
   document.getElementById("passField").style.display = "none";
+  document.getElementById("username").removeAttribute('required');
+  document.getElementById("pass2").removeAttribute('required');
 };
-signupBtn.onclick = function () {
+signupBtn1.onclick = function () {
   nameField.style.maxHeight = "60px";
   passField.style.maxHeight = "60px";
-  title.innerHTML = "SIGN UP";
-  signupBtn.classList.remove("disable");
-  signinBtn.classList.add("disable");
+  document.getElementById("username").setAttribute('required','required');
+  document.getElementById("pass2").setAttribute('required','required');
+  document.getElementById("signupBtn").style.display = "block";
+  document.getElementById("signupBtn1").style.display = "none";
+  document.getElementById("signinBtn").style.display = "none";
+  document.getElementById("signinBtn1").style.display = "block";
+  document.getElementById("nameField").style.display = "block";
   document.getElementById("passField").style.display = "block";
+  
 };
-document.addEventListener('DOMContentLoaded', function () {
-  var storedChoice = localStorage.getItem('themeChoice');
-  if (storedChoice) {
-      var themeIcon = document.querySelector('.theme-icon');
-      themeIcon.classList.remove('fa-sun', 'fa-moon');
-      themeIcon.classList.add(storedChoice);
-  }
-});
+
+var storedChoice = localStorage.getItem('themeChoice');
+if (storedChoice) {
+  var themeIcon = document.querySelector('.theme-icon');
+  themeIcon.classList.remove('fa-sun', 'fa-moon');
+  themeIcon.classList.add(storedChoice);
+}
